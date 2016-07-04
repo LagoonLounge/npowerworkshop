@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>N次坊</title>
+
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+        <!-- Semantic UI -->
+        <link rel="stylesheet" href="semantic/semantic.min.css">
+        <script src="semantic/semantic.min.js" charset="utf-8"></script>
+
+        <script src="js/jqfloat.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="css/fonts.css">
+
+        <script type="text/javascript">
+            function clickfun(url){
+                var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+                $body.animate({
+                    scrollTop: $(url).offset().top
+                });
+                return false;
+            }
+        </script>
+
+        <style type="text/css">
+            @charset 'UTF-8';
+
+            @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+            @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+            @font-face
+            {
+            	font-family: 'My Fonts';
+            	src: url('fonts/NotoSans-Regular.ttf');
+            }
+
+            @font-face
+            {
+            	font-family: 'My Fonts';
+            	unicode-range: U+00-024F;
+            	src: url('fonts/NotoSansCJKtc-Regular.otf');
+            }
+            a.back-to-top {
+            	display: none;
+            	width: 70px;
+            	height: 70px;
+            	text-indent: -9999px;
+            	position: fixed;
+            	z-index: 999;
+            	right: 20px;
+            	bottom: 20px;
+            	background: url("images/up-arrow.png") no-repeat center;
+            }
+
+            .hidden.menu {
+              display: none;
+            }
+
+            .masthead.segment {
+              min-height: 50px;
+              padding: 1em 0em;
+            }
+            .masthead .logo.item img {
+              margin-right: 1em;
+            }
+            .masthead .ui.menu .ui.button {
+              margin-left: 0.5em;
+            }
+            .masthead h1.ui.header {
+              margin-top: 3em;
+              margin-bottom: 0em;
+              font-size: 4em;
+              font-weight: normal;
+            }
+            .masthead h2 {
+              font-size: 1.7em;
+              font-weight: normal;
+            }
+
+            .ui.vertical.stripe {
+              padding: 8em 0em;
+            }
+            .ui.vertical.stripe h3 {
+              font-size: 2em;
+            }
+            .ui.vertical.stripe .button + h3,
+            .ui.vertical.stripe p + h3 {
+              margin-top: 3em;
+            }
+            .ui.vertical.stripe .floated.image {
+              clear: both;
+            }
+            .ui.vertical.stripe p {
+              font-size: 1.33em;
+            }
+            .ui.vertical.stripe .horizontal.divider {
+              margin: 3em 0em;
+            }
+
+            .quote.stripe.segment {
+              padding: 0em;
+            }
+            .quote.stripe.segment .grid .column {
+              padding-top: 5em;
+              padding-bottom: 5em;
+            }
+
+            .footer.segment {
+              padding: 5em 0em;
+            }
+
+            .secondary.pointing.menu .toc.item {
+              display: none;
+            }
+
+            @media only screen and (max-width: 700px) {
+              .ui.fixed.menu {
+                display: none !important;
+              }
+              .secondary.pointing.menu .item,
+              .secondary.pointing.menu .menu {
+                display: none;
+              }
+              .secondary.pointing.menu .toc.item {
+                display: block;
+              }
+              .masthead.segment {
+                min-height: 350px;
+              }
+              .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+              }
+              .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+              }
+            }
+        </style>
+    </head>
+    <body style="font-family: 'cwTeXHei', 'cwTeXHei', 'My Fonts', serif;">
+        <!-- Following Menu -->
+        <div class="ui large top fixed hidden menu">
+            <div class="ui container">
+                <div class="right menu">
+                    <a class="item" href="https://www.facebook.com/npower.workshop" target="_blank">N次坊</a>
+                    <a class="item" onclick="clickfun('#story')">N 的故事</a>
+                    <a class="item" onclick="clickfun('#event')">N 的航海圖</a>
+                    <a class="item" onclick="clickfun('#plan')">N 的計畫</a>
+                    <a class="item" onclick="clickfun('#member')">N 的意志</a>
+                    <a class="item" onclick="clickfun('#history')">N 的歷史</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <div class="ui vertical inverted sidebar menu">
+            <div class="right menu">
+                <a class="item" href="https://www.facebook.com/npower.workshop" target="_blank">N次坊</a>
+                <a class="item" onclick="clickfun('#story')">N 的故事</a>
+                <a class="item" onclick="clickfun('#event')">N 的航海圖</a>
+                <a class="item" onclick="clickfun('#plan')">N 的計畫</a>
+                <a class="item" onclick="clickfun('#member')">N 的意志</a>
+                <a class="item" onclick="clickfun('#history')">N 的歷史</a>
+            </div>
+        </div>
+
+        <div class="ui inverted vertical masthead center aligned segment">
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu">
+                    <div class="right menu">
+                        <a class="item" href="https://www.facebook.com/npower.workshop" target="_blank">N次坊</a>
+                        <a class="item" onclick="clickfun('#story')">N 的故事</a>
+                        <a class="item" onclick="clickfun('#event')">N 的航海圖</a>
+                        <a class="item" onclick="clickfun('#plan')">N 的計畫</a>
+                        <a class="item" onclick="clickfun('#member')">N 的意志</a>
+                        <a class="item" onclick="clickfun('#history')">N 的歷史</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui container">
+            <div id="home" class="ui middle aligned center aligned grid">
+                <img id="logo" src="images/logo_web.png" style="height: 600px;">
+            </div>
+            <br><br><br>
+            <div id="story" class="ui middle aligned center aligned grid">
+                <p style="font-size: 48px;"><br>N 的故事</p>
+                <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fnpower.workshop%2Fvideos%2F1691869381095523%2F&show_text=0&width=560" width="1120" height="630" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+            </div>
+
+            <div id="event" class="ui middle aligned center aligned grid">
+                <p style="font-size: 48px;"><br>N 的航海圖</p>
+                <p style="font-size: 24px;"><br><br>活動資訊</p>
+                <div class="ui top attached tabular menu">
+                    <a class="item active" data-tab="south">南部</a>
+                    <a class="item" data-tab="middle">中部</a>
+                    <a class="item" data-tab="north">北部</a>
+                </div>
+                <div class="ui bottom attached tab segment active" data-tab="south">
+                    <img src="images/events/UX.jpg" class="ui image">
+                    <img src="images/events/break.jpg" class="ui image">
+                </div>
+                <div class="ui bottom attached tab segment" data-tab="middle">
+                    <img src="images/events/UX.jpg" class="ui image">
+                </div>
+                <div class="ui bottom attached tab segment" data-tab="north">
+                    <img src="images/events/UX.jpg" class="ui image">
+                </div>
+                <script type="text/javascript">
+                    $('.menu .item').tab();
+                </script>
+            </div>
+
+            <div id="plan" class="ui middle aligned center aligned grid">
+                <p style="font-size: 48px;"><br>N 的計畫</p>
+                <p style="font-size: 24px;"><br><br>會員方案</p>
+                <div class="three column row">
+                    <div class="column">
+                        <p style="font-size: 36px;">一般學員</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="column">
+                        <p style="font-size: 36px;">黃金學員</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                    <div class="column">
+                        <p style="font-size: 36px;">白金學員</p>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+
+            <div id="member" class="ui middle aligned center aligned grid">
+                <p style="font-size: 48px;"><br>N 的意志</p>
+                <p style="font-size: 24px;"><br><br>成員介紹</p>
+            </div>
+
+            <div id="history" class="ui middle aligned center aligned grid">
+                <p style="font-size: 48px;"><br>N 的歷史</p>
+                <p style="font-size: 24px;"><br><br>我們的曾經</p>
+            </div>
+        </div>
+        <a href="#" class="back-to-top"><i class="angle up large icon"></i></a>
+        <script type="text/javascript">
+            $('#logo').jqFloat({
+                width: 10,
+                height: 10,
+                speed: 1000
+            });
+
+            var amountScrolled = 300;
+            $(window).scroll(function() {
+            	if ( $(window).scrollTop() > amountScrolled ) {
+            		$('a.back-to-top').fadeIn('slow');
+            	} else {
+            		$('a.back-to-top').fadeOut('slow');
+            	}
+            });
+            $('a.back-to-top').click(function() {
+            	$('html, body').animate({
+            		scrollTop: 0
+            	}, 700);
+            	return false;
+            });
+
+            $(document)
+                .ready(function() {
+
+                  // fix menu when passed
+                  $('.masthead')
+                    .visibility({
+                      once: false,
+                      onBottomPassed: function() {
+                        $('.fixed.menu').transition('fade in');
+                      },
+                      onBottomPassedReverse: function() {
+                        $('.fixed.menu').transition('fade out');
+                      }
+                    })
+                  ;
+
+                  // create sidebar and attach to menu open
+                  $('.ui.sidebar')
+                    .sidebar('attach events', '.toc.item')
+                  ;
+
+                })
+              ;
+        </script>
+    </body>
+</html>
