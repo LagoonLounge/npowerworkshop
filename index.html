@@ -42,6 +42,7 @@
             	unicode-range: U+00-024F;
             	src: url('fonts/NotoSansCJKtc-Regular.otf');
             }
+
             a.back-to-top {
             	display: none;
             	width: 70px;
@@ -52,6 +53,34 @@
             	right: 20px;
             	bottom: 20px;
             	background: url("images/up-arrow.png") no-repeat center;
+            }
+
+            .pro{
+                position: absolute;
+                float: right;
+                width: 200px;
+                height: 75px;
+                z-index: -200;
+                top: 20%;
+                right: 15%;
+            }
+            .positive{
+                position: absolute;
+                float: left;
+                width: 200px;
+                height: 75px;
+                z-index: -200;
+                top: 40%;
+                left: 15%;
+            }
+            .people{
+                position: absolute;
+                float: right;
+                width: 200px;
+                height: 75px;
+                z-index: -200;
+                top: 80%;
+                right: 25%;
             }
 
             .hidden.menu {
@@ -171,7 +200,10 @@
         </div>
         <div class="ui container">
             <div id="home" class="ui middle aligned center aligned grid">
-                <img id="logo" src="images/logo_web.png" style="height: 600px;">
+                <img id="logo" src="images/logo_web.png" style="height: 600px; z-index: -300;">
+                <img class="pro" src="images/pro.png">
+                <img class="positive" src="images/positive.png">
+                <img class="people" src="images/people.png">
             </div>
             <br><br><br>
             <div id="story" class="ui middle aligned center aligned grid">
@@ -237,6 +269,21 @@
                 width: 10,
                 height: 10,
                 speed: 1000
+            });
+            $('.pro').jqFloat({
+                width: 10,
+                height: 10,
+                speed: 2000
+            });
+            $('.positive').jqFloat({
+                width: 10,
+                height: 10,
+                speed: 2000
+            });
+            $('.people').jqFloat({
+                width: 10,
+                height: 10,
+                speed: 2000
             });
 
             var amountScrolled = 300;
