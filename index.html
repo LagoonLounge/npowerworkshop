@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>N次坊</title>
+        <link href="favicon.ico" rel="SHORTCUT ICON">
 
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -27,8 +28,8 @@
         <style type="text/css">
             @charset 'UTF-8';
 
-            @import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
-            @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+            @import url(https://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+            @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 
             @font-face
             {
@@ -42,6 +43,7 @@
             	unicode-range: U+00-024F;
             	src: url('fonts/NotoSansCJKtc-Regular.otf');
             }
+
             a.back-to-top {
             	display: none;
             	width: 70px;
@@ -54,65 +56,40 @@
             	background: url("images/up-arrow.png") no-repeat center;
             }
 
+            .pro{
+                position: absolute;
+                float: right;
+                width: 200px;
+                height: 75px;
+                z-index: -200;
+                top: 20%;
+                right: 15%;
+            }
+            .positive{
+                position: absolute;
+                float: left;
+                width: 200px;
+                height: 75px;
+                z-index: -200;
+                top: 40%;
+                left: 15%;
+            }
+            .people{
+                position: absolute;
+                float: right;
+                width: 200px;
+                height: 75px;
+                z-index: -200;
+                top: 80%;
+                right: 25%;
+            }
+
             .hidden.menu {
               display: none;
             }
 
             .masthead.segment {
               min-height: 50px;
-              padding: 1em 0em;
-            }
-            .masthead .logo.item img {
-              margin-right: 1em;
-            }
-            .masthead .ui.menu .ui.button {
-              margin-left: 0.5em;
-            }
-            .masthead h1.ui.header {
-              margin-top: 3em;
-              margin-bottom: 0em;
-              font-size: 4em;
-              font-weight: normal;
-            }
-            .masthead h2 {
-              font-size: 1.7em;
-              font-weight: normal;
-            }
-
-            .ui.vertical.stripe {
-              padding: 8em 0em;
-            }
-            .ui.vertical.stripe h3 {
-              font-size: 2em;
-            }
-            .ui.vertical.stripe .button + h3,
-            .ui.vertical.stripe p + h3 {
-              margin-top: 3em;
-            }
-            .ui.vertical.stripe .floated.image {
-              clear: both;
-            }
-            .ui.vertical.stripe p {
-              font-size: 1.33em;
-            }
-            .ui.vertical.stripe .horizontal.divider {
-              margin: 3em 0em;
-            }
-
-            .quote.stripe.segment {
-              padding: 0em;
-            }
-            .quote.stripe.segment .grid .column {
-              padding-top: 5em;
-              padding-bottom: 5em;
-            }
-
-            .footer.segment {
-              padding: 5em 0em;
-            }
-
-            .secondary.pointing.menu .toc.item {
-              display: none;
             }
 
             @media only screen and (max-width: 700px) {
@@ -126,21 +103,10 @@
               .secondary.pointing.menu .toc.item {
                 display: block;
               }
-              .masthead.segment {
-                min-height: 350px;
-              }
-              .masthead h1.ui.header {
-                font-size: 2em;
-                margin-top: 1.5em;
-              }
-              .masthead h2 {
-                margin-top: 0.5em;
-                font-size: 1.5em;
-              }
             }
         </style>
     </head>
-    <body style="font-family: 'cwTeXHei', 'cwTeXHei', 'My Fonts', serif;">
+    <body style="font-family: 'cwTeXHei', 'cwTeXHei', 'My Fonts', serif; background-color:#FBFCED;">
         <!-- Following Menu -->
         <div class="ui large top fixed hidden menu">
             <div class="ui container">
@@ -155,9 +121,9 @@
             </div>
         </div>
 
-        <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui inverted vertical masthead center aligned segment" style="background-color:#78B0B4; height:50px;">
             <div class="ui container">
-                <div class="ui large secondary inverted pointing menu">
+                <div class="ui large secondary inverted pointing menu" style="border-width:0px; position:absolute; top:0px; left:50%;">
                     <div class="right menu">
                         <a class="item" href="https://www.facebook.com/npower.workshop" target="_blank">N次坊</a>
                         <a class="item" onclick="clickfun('#story')">N 的故事</a>
@@ -171,7 +137,10 @@
         </div>
         <div class="ui container">
             <div id="home" class="ui middle aligned center aligned grid">
-                <img id="logo" src="images/logo_web.png" style="height: 600px;">
+                <img id="logo" src="images/logo_web.png" style="height: 600px; z-index: -300;">
+                <img class="pro" src="images/pro.png">
+                <img class="positive" src="images/positive.png">
+                <img class="people" src="images/people.png">
             </div>
             <br><br><br>
             <div id="story" class="ui middle aligned center aligned grid">
@@ -179,7 +148,7 @@
                 <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fnpower.workshop%2Fvideos%2F1691869381095523%2F&show_text=0&width=560" width="1120" height="630" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
             </div>
 
-            <div id="event" class="ui middle aligned center aligned grid">
+            <div id="event" class="ui middle aligned center aligned grid" style="background-color:#FBFCED;">
                 <p style="font-size: 48px;"><br>N 的航海圖</p>
                 <p style="font-size: 24px;"><br><br>活動資訊</p>
                 <div class="ui top attached tabular menu">
@@ -188,42 +157,209 @@
                     <a class="item" data-tab="north">北部</a>
                 </div>
                 <div class="ui bottom attached tab segment active" data-tab="south">
-                    <img src="images/events/UX.jpg" class="ui image">
-                    <img src="images/events/break.jpg" class="ui image">
+                    <a href="https://www.accupass.com/go/nwordpower" target="_blank">
+                        <img src="images/events/nwordpower.jpg" class="ui image">
+                    </a>
+                    <a href="https://www.accupass.com/go/ncurator" target="_blank">
+                        <img src="images/events/ncurator.jpg" class="ui image">
+                    </a>
+                    <a href="https://www.accupass.com/go/neasyanimationpack" target="_blank">
+                        <img src="images/events/neasyanimationpack.jpg" class="ui image">
+                    </a>
+                    <a href="https://www.accupass.com/go/nselfbreakthrough" target="_blank">
+                        <img src="images/events/nselfbreakthrough.jpg" class="ui image">
+                    </a>
+                    <a href="https://www.accupass.com/go/nux" target="_blank">
+                        <img src="images/events/nux.jpg" class="ui image">
+                    </a>
                 </div>
                 <div class="ui bottom attached tab segment" data-tab="middle">
-                    <img src="images/events/UX.jpg" class="ui image">
+                    <img src="images/events/commingsoon.png" class="ui image">
                 </div>
                 <div class="ui bottom attached tab segment" data-tab="north">
-                    <img src="images/events/UX.jpg" class="ui image">
+                    <img src="images/events/commingsoon.png" class="ui image">
                 </div>
                 <script type="text/javascript">
                     $('.menu .item').tab();
                 </script>
             </div>
 
-            <div id="plan" class="ui middle aligned center aligned grid">
+            <div id="plan" class="ui middle aligned center aligned grid" style="background-color:#FBFCED;">
                 <p style="font-size: 48px;"><br>N 的計畫</p>
                 <p style="font-size: 24px;"><br><br>會員方案</p>
-                <div class="three column row">
-                    <div class="column">
-                        <p style="font-size: 36px;">一般學員</p>
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    </div>
-                    <div class="column">
-                        <p style="font-size: 36px;">黃金學員</p>
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    </div>
-                    <div class="column">
-                        <p style="font-size: 36px;">白金學員</p>
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    </div>
-                </div>
+                <a href="https://www.facebook.com/npower.workshop/photos/?tab=album&album_id=1767071593575301" target="_blank"><img class="ui image" src="images/members.png" style="margin:auto; height:700px;"></a>
             </div>
 
             <div id="member" class="ui middle aligned center aligned grid">
                 <p style="font-size: 48px;"><br>N 的意志</p>
                 <p style="font-size: 24px;"><br><br>成員介紹</p>
+                <div class="six column row">
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/1.png"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">侯智勳</p>
+                        <p style="font-size:16px;">長工</p>
+                        成功大學 正在轉系…<br><br>
+                        2016 N次坊│創辦人<br>
+                        2015 台美學生會議│行銷長<br>
+                        2015 台南城市浪人│首屆發起人'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/2.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">陳沛穎</p>
+                        <p style="font-size:16px;">磨石工</p>
+                        成功大學 心理學系<br><br>
+                        2016 N次坊│次方磨石工<br>
+                        2016 複雜生活節│講師聯絡人 <br>
+                        2016 INPSY│編輯'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/3.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">簡瓅</p>
+                        <p style="font-size:16px;">磨石工</p>
+                        台灣大學 化學工程學系<br><br>
+                        2016 NTU Net Impact 社會創新社│社長<br>
+                        2015 城市浪人流浪挑戰賽台大春季場│活動部<br>
+                        2014 Gogolook暑期實習生│行銷部<br>'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/4.png"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">呂方雯</p>
+                        <p style="font-size:16px;">磨石工</p>
+                        台灣大學 心理學系<br><br>
+                        2016 N次坊│磨石工<br>
+                        2016 台灣大學科學教育發展中心│專訪寫手<br>
+                        2015 - 電影筆記│影評人'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/5.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">林芝玉</p>
+                        <p style="font-size:16px;">轉職中</p>
+                        長榮大學 職業安全衛生學系<br><br>
+                        2016 N次坊│礦工<br>
+                        2015 - 2016 創新育成中心│雷雕助教'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/6.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">葉哲暠</p>
+                        <p style="font-size:16px;">底數礦工</p>
+                        台北大學 企業管理研究所<br><br>
+                        2016 N次坊│礦工<br>
+                        2014 Beatbox街頭表演│表演工<br>
+                        2014 台灣中小企業銀行│暑期實習生'>
+                    </div>
+                </div>
+                <div class="six column row">
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/7.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">陳俞安</p>
+                        <p style="font-size:16px;">底數礦工</p>
+                        臺北教育大學 特殊教育學系<br><br>
+                        2016 N次坊│底數礦工<br>
+                        2016 TEDx NTUE│行銷長<br>
+                        2016 國際青年商會中山分會│理事<br>
+                        2015 國北教大學生議會│議員<br>
+                        2014 UMC 聯華電子│Recruiting/HR'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/8.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">陳家祥</p>
+                        <p style="font-size:16px;">底數礦工</p>
+                        東吳大學 資訊管理學系雙主修國際貿易學系<br><br>
+                        2016  N次坊│礦工<br>
+                        2015  AIESEC 國際商管學生會│部門經理<br>
+                        2015  Deloitte 勤業眾信│企業風險管理部實習生<br>
+                        2014  東吳生涯發展中心│活動長'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/9.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">林佑諭</p>
+                        <p style="font-size:16px;">暖暖工</p>
+                        高雄大學 西洋語文學系<br><br>
+                        2016 N次坊│暖暖工<br>
+                        2016 親善服務團│公關長'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/10.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">吳咅燁</p>
+                        <p style="font-size:16px;">暖暖工</p>
+                        中正大學 企業管理研究所<br>
+                        系學會公關長<br><br>
+                        2016 N次坊│暖暖工<br>
+                        2016 中小企業研討會│總召暨總務長<br>
+                        2015 第24屆嘉義市國際管樂節效益評估│專案經理<br>
+                        2015 第四屆創致工作坊│專案長'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/11.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">劉筑菁</p>
+                        <p style="font-size:16px;">美工</p>
+                        中山醫學大學 心理系<br><br>
+                        2016 N次坊│美工<br>
+                        2014 Nuts studio│創意總監'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/12.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">邱于嘉</p>
+                        <p style="font-size:16px;">小編工</p>
+                        中國醫藥大學 醫學系<br><br>
+                        2016 N次坊│小編工<br>
+                        2016 TEDxChinaMedicalU<br>
+                        2015 TEDxNTHU│宣傳部'>
+                    </div>
+                </div>
+                <div class="six column row">
+                    <div class="column">
+                        <img class="ui small circular avatar image" src="images/members/13.jpg"
+                        data-position="top center"
+                        data-html='<p style="font-size:20px;">詹欣達</p>
+                        <p style="font-size:16px;">建築工</p>
+                        成功大學 資訊工程學系<br>
+                        量子密碼與資訊安全實驗室<br>
+                        計網中心實驗室<br><br>
+                        2016 KKStream│實習生<br>
+                        2016 N次坊│建築工<br>
+                        2016 MOPCON│場務組報到股股長<br>
+                        2015 MOPCON│場務組物流股股長<br>
+                        2014 MOPCON│線路組組員'>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src=""
+                        data-position="top center"
+                        data-html=''>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src=""
+                        data-position="top center"
+                        data-html=''>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src=""
+                        data-position="top center"
+                        data-html=''>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src=""
+                        data-position="top center"
+                        data-html=''>
+                    </div>
+                    <div class="column">
+                        <img class="ui small circular avatar image" src=""
+                        data-position="top center"
+                        data-html=''>
+                    </div>
+                </div>
             </div>
 
             <div id="history" class="ui middle aligned center aligned grid">
@@ -237,6 +373,21 @@
                 width: 10,
                 height: 10,
                 speed: 1000
+            });
+            $('.pro').jqFloat({
+                width: 10,
+                height: 10,
+                speed: 2000
+            });
+            $('.positive').jqFloat({
+                width: 10,
+                height: 10,
+                speed: 2000
+            });
+            $('.people').jqFloat({
+                width: 10,
+                height: 10,
+                speed: 2000
             });
 
             var amountScrolled = 300;
@@ -275,6 +426,9 @@
                     .sidebar('attach events', '.toc.item')
                   ;
 
+
+                  $('.avatar').popup({
+                  });
                 })
               ;
         </script>
